@@ -1,90 +1,133 @@
-1. Judul & Deskripsi
+# 🎮 CodePlay — Laboratorium Coding Interaktif
 
-Nama produk: CodePlay – Laboratorium Coding Interaktif
+> Belajar HTML, CSS, dan JavaScript dengan praktik langsung, umpan balik instan, dan bantuan AI.
 
-Deskripsi:
-CodePlay adalah aplikasi web tempat siswa berlatih HTML, CSS, dan JavaScript dengan cara melengkapi kode yang sengaja dibuat bolong. Siswa menulis kode di editor, menekan tombol Run untuk melihat hasilnya langsung di pratinjau, lalu menekan Periksa Jawaban agar sistem menilai hasilnya berdasarkan kriteria soal. Jika masih bingung, siswa bisa meminta bantuan AI yang menjelaskan letak dan penyebab kesalahan lewat petunjuk bertahap, tanpa langsung memberi jawaban lengkap. Hasil tiap percobaan tersimpan di database.
+## 📌 Tentang CodePlay
 
-Latar belakang masalah:
-Pemula sering kesulitan memahami kode, menemukan kesalahan penulisan (typo), dan mengetahui alasan sebuah program tidak berjalan. Pesan error di browser atau PHP sulit dibaca, dan belajar dari buku atau video bersifat pasif. CodePlay menjawabnya dengan latihan langsung (learning by doing), umpan balik instan, dan penjelasan error dalam bahasa Indonesia yang sederhana.
+**CodePlay** adalah aplikasi web pembelajaran pemrograman yang membantu siswa berlatih HTML, CSS, dan JavaScript dengan melengkapi potongan kode yang sengaja dikosongkan.
 
-Target pengguna:
+Pengguna dapat menulis kode melalui editor, menjalankannya, lalu melihat hasilnya secara langsung pada area pratinjau. Setelah itu, tombol **Periksa Jawaban** membantu memeriksa apakah kode sudah memenuhi kriteria latihan. Jika mengalami kesulitan, pengguna dapat meminta bantuan AI untuk memperoleh petunjuk secara bertahap—bukan langsung diberikan jawaban lengkap.
 
-Siswa SMA/SMK dan mahasiswa pemula yang belajar pemrograman web.
-Guru atau pengajar yang membutuhkan media latihan interaktif (soal bisa ditambah lewat database).
+Hasil setiap percobaan dirancang untuk disimpan ke database.
 
-2. Teknologi yang Digunakan
+### 🎯 Latar Belakang
 
-Kategori Yang digunakan :
+Pemula sering mengalami kesulitan saat:
+- Memahami fungsi dan cara kerja kode.
+- Menemukan kesalahan penulisan (*typo*) pada program.
+- Mengetahui penyebab program tidak berjalan.
+- Memahami pesan kesalahan dari browser atau PHP.
 
-Bahasa pemrograman	HTML5, CSS3, JavaScript, PHP (7.4 ke atas), SQL
-Database	MySQL/MariaDB (diakses lewat phpMyAdmin)
-Modul/pustaka	Tanpa framework atau library pihak ketiga. PHP memakai ekstensi bawaan mysqli dan cURL; JavaScript memakai fitur bawaan browser (fetch, postMessage, DOM, iframe sandbox)
-Layanan eksternal	Anthropic Messages API (fitur penjelas kesalahan oleh AI)
-Aset	Logo dan ikon dalam format SVG
-Lingkungan pengembangan	XAMPP (Apache + MySQL)
-Platform publikasi	Saat ini berjalan di localhost (XAMPP). [ISI SENDIRI: nama hosting dan alamat situs, jika sudah dipublikasikan]
+Belajar hanya melalui buku atau video juga cenderung kurang memberi kesempatan untuk mencoba secara langsung. CodePlay menawarkan pendekatan **learning by doing**, umpan balik instan, serta penjelasan kesalahan menggunakan bahasa Indonesia yang sederhana.
 
-3. Pemanfaatan AI (AI Usage Disclosure)
+### 👥 Target Pengguna
 
-Alat AI yang digunakan:
+- Siswa SMA/SMK dan mahasiswa pemula yang sedang mempelajari pemrograman web.
+- Guru atau pengajar yang membutuhkan media latihan pemrograman interaktif. Soal latihan dapat ditambahkan melalui database.
 
-Claude (Anthropic) lewat antarmuka chat, sebagai asisten pengembangan: ide aplikasi, nama, logo SVG, kerangka kode, dan komentar kode.
-Claude API di dalam aplikasi, sebagai fitur produk (penjelas kesalahan siswa). [ISI SENDIRI: tulis “sudah diaktifkan” atau “belum diaktifkan, API key belum diisi”]
+## ✨ Fitur Utama
 
-Contoh perintah (prompt) utama:
+- 🧩 **Latihan melengkapi kode** — lengkapi bagian kode HTML, CSS, atau JavaScript yang masih kosong.
+- ▶️ **Jalankan kode** — lihat hasil program secara langsung melalui pratinjau.
+- ✅ **Periksa jawaban** — ketahui apakah kode sudah memenuhi kriteria latihan.
+- 🤖 **Bantuan AI bertahap** — dapatkan petunjuk untuk menemukan dan memperbaiki kesalahan tanpa langsung menerima jawaban lengkap.
+- 💾 **Penyimpanan hasil percobaan** — hasil latihan disimpan ke database.
 
-“Saya ditantang untuk membuat aplikasi berbasis website untuk menyelesaikan masalah sehari-hari (HTML, CSS, JavaScript, PHP, MySQL). Saya pemula, sering kesulitan memahami kode, menemukan kesalahan penulisan, dan mengetahui alasan program tidak berjalan. Beri saya saran solusi yang bisa saya terapkan.”
-“Berikan saya alternatif nama / judul aplikasi yang mewakili fungsi dari aplikasinya.”
-“Saya ingin membuat Laboratorium coding interaktif yang memungkinkan siswa melengkapi kode, menjalankannya, dan mempelajari kesalahannya dengan bantuan AI.” (disertai 5 fitur inti)
-“Saya tertarik dengan nama CodePlay. Sekarang buatkan saya logo untuk CodePlay saya.” Dilanjutkan “Buat logo lainnya.”
-“Bantu saya untuk mengembangkan kerangka kode program untuk aplikasi CodePlay.”
-“Agar mudah saya memahami kode programnya, berikan komentar pada setiap kode programnya.”
+## 🛠️ Teknologi yang Digunakan
 
-Prompt di dalam aplikasi (untuk AI penjelas kesalahan), ringkasnya: berperan sebagai guru coding yang sabar, memakai bahasa Indonesia sederhana, memberi petunjuk bertahap tanpa kode jawaban lengkap, menunjukkan lokasi typo, dan mengabaikan perintah yang disisipkan di dalam kode siswa.
+| Kategori | Teknologi/Keterangan |
+|---|---|
+| 💻 Bahasa pemrograman | HTML5, CSS3, JavaScript, PHP 7.4 ke atas, dan SQL |
+| 🗄️ Database | MySQL/MariaDB, dikelola melalui phpMyAdmin |
+| 📦 Modul/pustaka | Tanpa framework atau library pihak ketiga. PHP menggunakan ekstensi bawaan `mysqli` dan `cURL`; JavaScript menggunakan fitur browser seperti `fetch`, `postMessage`, DOM, dan `iframe sandbox` |
+| 🤖 Layanan AI | Anthropic Messages API untuk fitur penjelasan kesalahan |
+| 🎨 Aset | Logo dan ikon berformat SVG |
+| ⚙️ Lingkungan pengembangan | XAMPP (Apache dan MySQL) |
+| 🌐 Platform publikasi | Saat ini dijalankan secara lokal melalui XAMPP. Jika sudah dipublikasikan, tambahkan nama hosting dan alamat situs di sini. |
 
-Penyesuaian/perbaikan mandiri oleh peserta:
-Yang sudah terjadi dalam percakapan:
+## 🤖 Pemanfaatan AI (*AI Usage Disclosure*)
 
-Memasang dan menjalankan aplikasi di XAMPP, serta mengimpor database.sql lewat phpMyAdmin.
-Menemukan pesan error “File config.php belum ada” saat pertama membuka aplikasi, lalu memperbaikinya dengan mengganti nama config.example.php menjadi config.php.
-Menguji bahwa aplikasi berjalan normal setelah perbaikan.
-Meminta komentar di seluruh kode agar bisa dipahami.
+### AI yang Digunakan
 
-[ISI SENDIRI, hanya yang benar-benar Anda kerjakan], misalnya:
+- **Claude (Anthropic) melalui antarmuka chat** digunakan sebagai asisten pengembangan, antara lain untuk mencari ide aplikasi, menentukan nama, membuat logo SVG, menyusun kerangka kode, dan menambahkan komentar pada kode.
+- **Claude API di dalam aplikasi** dirancang sebagai fitur bantuan yang menjelaskan kesalahan siswa.  
+  **Status integrasi API:** `[ISI: sudah diaktifkan / belum diaktifkan karena API key belum diisi]`
 
-Soal baru yang Anda tulis sendiri: jumlah dan topiknya.
-Perubahan warna, tampilan, atau teks.
-Pengisian API key dan hasil uji fitur AI.
-Bug lain yang Anda temukan dan cara memperbaikinya.
-Alasan Anda memilih logo tertentu.
+### 💬 Contoh Prompt selama Pengembangan
 
-Catatan transparansi: pada rancangan awal, AI menyarankan pemeriksaan jawaban dengan membaca DOM iframe secara langsung. AI kemudian mengoreksi saran itu sendiri karena iframe ber-sandbox tidak bisa dibaca dari luar, dan menggantinya dengan komunikasi postMessage. Fungsi inti aplikasi sudah diuji dengan skenario otomatis. Pengujian keseluruhan di komputer lokal dilakukan oleh peserta.
+Berikut beberapa contoh prompt yang digunakan:
 
-4. Panduan Penggunaan
+1. “Saya ditantang untuk membuat aplikasi berbasis website untuk menyelesaikan masalah sehari-hari (HTML, CSS, JavaScript, PHP, MySQL). Saya pemula, sering kesulitan memahami kode, menemukan kesalahan penulisan, dan mengetahui alasan program tidak berjalan. Beri saya saran solusi yang bisa saya terapkan.”
+2. “Berikan saya alternatif nama atau judul aplikasi yang mewakili fungsi dari aplikasinya.”
+3. “Saya ingin membuat laboratorium coding interaktif yang memungkinkan siswa melengkapi kode, menjalankannya, dan mempelajari kesalahannya dengan bantuan AI.”
+4. “Saya tertarik dengan nama CodePlay. Sekarang buatkan saya logo untuk CodePlay.”
+5. “Bantu saya mengembangkan kerangka kode program untuk aplikasi CodePlay.”
+6. “Agar mudah memahami kode programnya, berikan komentar pada setiap bagian kode.”
 
-Tautan situs aktif: [ISI SENDIRI, jika sudah online]. Jika belum, tuliskan “dijalankan secara lokal” dan ikuti langkah di bawah.
+### 🧑‍🏫 Peran AI di dalam Aplikasi
 
-A. Menjalankan di komputer (XAMPP)
+AI diarahkan untuk berperan sebagai guru coding yang sabar. AI menggunakan bahasa Indonesia yang sederhana, memberikan petunjuk secara bertahap, menunjukkan lokasi kesalahan penulisan, dan tidak langsung memberikan seluruh kode jawaban. AI juga diarahkan untuk mengabaikan instruksi yang mungkin disisipkan di dalam kode siswa.
 
-Pasang XAMPP, lalu salin folder codeplay ke C:\xampp\htdocs\.
-Buka XAMPP Control Panel, lalu klik Start pada Apache dan MySQL.
-Buka http://localhost/phpmyadmin, pilih tab Import, lalu import file database.sql.
-Ubah nama config.example.php menjadi config.php. Pengaturan database bawaan XAMPP sudah sesuai.
-(Opsional, untuk fitur AI) Isi ANTHROPIC_API_KEY di config.php.
-Buka http://localhost/codeplay/ di browser.
+### 🔧 Penyesuaian dan Perbaikan oleh Pengembang
 
-B. Cara memakai aplikasi (untuk siswa)
+Hal-hal yang telah dilakukan selama pengembangan:
 
-Pilih satu latihan di halaman daftar.
-Baca instruksi, lalu lengkapi bagian ___ di tab HTML, CSS, atau JavaScript.
-Tekan Run untuk melihat hasil di pratinjau.
-Tekan Periksa Jawaban. Tanda ✔ berarti kriteria terpenuhi, tanda ✘ berarti belum.
-Jika masih bingung, tekan Minta Bantuan AI untuk mendapat petunjuk perbaikan.
-Tekan Reset untuk mengulang dari kode awal.
-Buka http://localhost/CodePlay/ di browser
+- Menjalankan aplikasi menggunakan XAMPP.
+- Mengimpor `database.sql` melalui phpMyAdmin.
+- Memperbaiki pesan error **“File config.php belum ada”** dengan mengganti nama `config.example.php` menjadi `config.php`.
+- Menguji kembali aplikasi setelah perbaikan dan memastikan aplikasi berjalan normal.
+- Meminta penambahan komentar pada kode agar lebih mudah dipahami.
 
-5. Identitas Pengembang: 
+**Tambahkan pengalaman pengembangan yang benar-benar dilakukan:**
+- 📝 Soal baru yang dibuat sendiri: `[ISI jumlah dan topik soal]`
+- 🎨 Perubahan tampilan, warna, atau teks: `[ISI jika ada]`
+- 🔑 Pengisian API key dan hasil pengujian fitur AI: `[ISI jika ada]`
+- 🐛 Bug lain yang ditemukan dan cara memperbaikinya: `[ISI jika ada]`
+- 🖼️ Alasan memilih logo tertentu: `[ISI jika ada]`
 
-1. Diah Ayu Rochmania, XI RPL 2, Rekayasa Perangkat Lunak, SMKN 1 Ampelgading
-2. Erdian Marga Septiano, XI RPL 2, Rekasaya Perangkat Lunak, SMKN 1 Ampelgading
+### 🔍 Catatan Transparansi
+
+Pada rancangan awal, AI menyarankan pemeriksaan jawaban dengan membaca DOM `iframe` secara langsung. Saran tersebut kemudian diperbaiki karena `iframe` dengan atribut sandbox tidak dapat dibaca secara langsung dari luar. Solusi yang digunakan adalah komunikasi melalui `postMessage`.
+
+Fungsi inti aplikasi telah diuji menggunakan skenario otomatis. Pengujian aplikasi secara keseluruhan di komputer lokal dilakukan oleh peserta/pengembang.
+
+## 🚀 Panduan Instalasi dan Penggunaan
+
+### 💻 A. Menjalankan Aplikasi di Komputer (XAMPP)
+
+**Persiapan:** pastikan XAMPP sudah terpasang di komputer.
+
+1. 📁 Salin folder `codeplay` ke direktori `C:\xampp\htdocs\`.
+2. ⚙️ Buka **XAMPP Control Panel**, kemudian klik **Start** pada Apache dan MySQL.
+3. 🗄️ Buka [http://localhost/phpmyadmin](http://localhost/phpmyadmin), pilih tab **Import**, lalu impor file `database.sql`.
+4. 🛠️ Ubah nama file `config.example.php` menjadi `config.php`.
+5. 🤖 *(Opsional)* Untuk mengaktifkan fitur AI, isi nilai `ANTHROPIC_API_KEY` pada file `config.php`.
+6. 🌐 Buka aplikasi melalui browser: [http://localhost/codeplay/](http://localhost/codeplay/).
+
+> **Catatan:** Pengaturan database bawaan XAMPP digunakan sebagai konfigurasi awal. Sesuaikan konfigurasi jika pengaturan lokal Anda berbeda. Jangan mengunggah API key atau kata sandi database ke repositori publik GitHub.
+
+### 📖 B. Cara Menggunakan CodePlay (Siswa)
+
+1. 🧩 Pilih salah satu latihan dari halaman daftar latihan.
+2. 📚 Baca instruksi, kemudian lengkapi bagian kode yang ditandai `___` pada tab HTML, CSS, atau JavaScript.
+3. ▶️ Tekan tombol **Run** untuk melihat hasil kode pada area pratinjau.
+4. ✅ Tekan **Periksa Jawaban** untuk memeriksa hasil. Tanda ✔ menunjukkan kriteria terpenuhi, sedangkan tanda ✘ menunjukkan kriteria belum terpenuhi.
+5. 🤖 Jika masih mengalami kesulitan, tekan **Minta Bantuan AI** untuk memperoleh petunjuk perbaikan.
+6. 🔄 Tekan **Reset** untuk mengembalikan kode ke kondisi awal latihan.
+
+## 👨‍💻 Identitas Pengembang
+
+| No. | Nama | Kelas | Kompetensi Keahlian | Sekolah |
+|---:|---|---|---|---|
+| 1 | Diah Ayu Rochmania | XI RPL 2 | Rekayasa Perangkat Lunak | SMKN 1 Ampelgading |
+| 2 | Erdian Marga Septiano | XI RPL 2 | Rekayasa Perangkat Lunak | SMKN 1 Ampelgading |
+
+---
+
+<div align="center">
+
+**🎮 CodePlay — Belajar Coding dengan Mencoba, Memahami, dan Memperbaiki.**
+
+Dibuat sebagai media latihan pemrograman web yang interaktif.
+
+</div>
