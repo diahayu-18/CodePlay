@@ -18,7 +18,7 @@ Pemula sering mengalami kesulitan saat:
 - Memahami fungsi dan cara kerja kode.
 - Menemukan kesalahan penulisan (*typo*) pada program.
 - Mengetahui penyebab program tidak berjalan.
-- Memahami pesan kesalahan dari browser atau PHP.
+- Memahami pesan kesalahan dari browser.
 
 Belajar hanya melalui buku atau video juga cenderung kurang memberi kesempatan untuk mencoba secara langsung. CodePlay menawarkan pendekatan **learning by doing**, umpan balik instan, serta penjelasan kesalahan menggunakan bahasa Indonesia yang sederhana.
 
