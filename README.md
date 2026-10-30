@@ -82,6 +82,7 @@ Tekan Run untuk melihat hasil di pratinjau.
 Tekan Periksa Jawaban. Tanda ✔ berarti kriteria terpenuhi, tanda ✘ berarti belum.
 Jika masih bingung, tekan Minta Bantuan AI untuk mendapat petunjuk perbaikan.
 Tekan Reset untuk mengulang dari kode awal.
+Buka http://localhost/CodePlay/ di browser
 
 5. Identitas Pengembang: 
 
