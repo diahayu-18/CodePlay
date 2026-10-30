@@ -3,6 +3,8 @@
 > Belajar HTML, CSS, dan JavaScript dengan praktik langsung, umpan balik instan, dan bantuan AI.
 
 ## 📌 Tentang CodePlay
+<img width="943" height="529" alt="image" src="https://github.com/user-attachments/assets/202bbba6-156b-4e55-89ee-0ce2eafcc71b" />
+
 
 **CodePlay** adalah aplikasi web pembelajaran pemrograman yang membantu siswa berlatih HTML, CSS, dan JavaScript dengan melengkapi potongan kode yang sengaja dikosongkan.
 
